@@ -40,7 +40,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git clone --branch gh-pages https://x-access-token:${TOKEN}@github.com/thisiskushal31/blog.git gh-pages-branch
+          git clone --branch gh-pages https://x-access-token:${TOKEN}@github.com/thisiskushal31/link.git gh-pages-branch
 
       - name: Copy Sitemap & Push to gh-pages
         run: |
