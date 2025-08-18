@@ -26,7 +26,7 @@ export interface ProfileConfig {
 export const profileConfig: ProfileConfig = {
   profileImage: "./profile.jpeg",
   name: "Kushal Gupta",
-  about: "🚀 DevOps & Platform Engineer | Building scalable infrastructure with a dash of creativity",
+  about: "🚀 DevOps & Platform Engineer | Tech blogs, experiments & personal insights",
   socialLinks: [
     {
       name: 'GitHub',
