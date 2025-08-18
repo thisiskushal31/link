@@ -1,0 +1,25 @@
+{
+  "name": "Kushal Gupta | Platform Engineer & DevOps Specialist | Tech Resources Hub",
+  "short_name": "Kushal Tech Hub",
+  "description": "Platform Engineer & DevOps Specialist building scalable cloud infrastructure. Access 100+ curated links to professional profiles, projects, courses, tools, and resources for DevOps, Platform Engineering, and Software Development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a192f",
+  "theme_color": "#0a192f",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 64x64 96x96 128x128 256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/og.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "en",
+  "categories": ["productivity", "utilities", "developer tools"],
+  "keywords": ["platform engineering", "devops", "cloud infrastructure", "kubernetes", "docker", "aws", "ci/cd", "gitops", "terraform", "microservices", "site reliability engineering", "sre", "automation", "infrastructure as code"]
+}

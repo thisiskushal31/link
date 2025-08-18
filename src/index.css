@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 18%;
+    
+    --primary: 168 45% 50%;
+    --primary-foreground: 39 75% 96%;
+    --secondary: 25 75% 79%;
+    --secondary-foreground: 0 0% 18%;
+    --accent: 168 35% 56%;
+    --accent-foreground: 39 75% 96%;
+    --button-bg: 25 75% 96%;
+    --button-bg-hover: 25 75% 93%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+    --card-hover: 0 0% 97%;
+    
+    --border: 0 0% 85%;
+    --input: 39 75% 98%;
+    --ring: 168 35% 56%;
+    
+    --muted: 39 20% 92%;
+    --muted-foreground: 0 0% 42%;
+    
+    --popover: 39 75% 98%;
+    --popover-foreground: 0 0% 18%;
+    
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 39 75% 96%;
+    
+    --shadow-subtle: 0 1px 3px hsl(0 0% 0% / 0.06);
+    --shadow-card: 0 2px 6px hsl(0 0% 0% / 0.04);
+    --shadow-elevated: 0 4px 12px hsl(0 0% 0% / 0.08);
+    
+    --transition-fast: all 0.15s ease-out;
+    --transition-smooth: all 0.2s ease-out;
+    
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    
+    --primary: 168 50% 70%;
+    --primary-foreground: 222 84% 5%;
+    --secondary: 25 80% 75%;
+    --secondary-foreground: 222 84% 5%;
+    --accent: 271 91% 75%;
+    --accent-foreground: 222 84% 5%;
+    
+    --card: 217 32% 18%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 217 32% 22%;
+    
+    --border: 217 32% 25%;
+    --input: 217 32% 18%;
+    --ring: 168 50% 70%;
+    
+    --muted: 217 32% 25%;
+    --muted-foreground: 215 20% 65%;
+    
+    --popover: 217 32% 18%;
+    --popover-foreground: 210 40% 98%;
+    
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --shadow-subtle: 0 1px 3px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 2px 6px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 4px 12px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card border border-border rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .minimal-hover {
+    transition: var(--transition-fast);
+  }
+  
+  .minimal-hover:hover {
+    box-shadow: var(--shadow-subtle);
+    transform: translateY(-1px);
+  }
+  
+  .gradient-text {
+    color: hsl(var(--primary));
+  }
+  
+  .link-card-compact {
+    @apply bg-card rounded-xl py-2.5 px-3.5 cursor-pointer border border-border;
+    transition: var(--transition-fast);
+    will-change: transform, box-shadow;
+  }
+  
+  html:not(.dark) .link-card-compact {
+    background-color: hsl(var(--button-bg));
+  }
+  html:not(.dark) .link-card-compact:hover {
+    background-color: hsl(var(--button-bg-hover));
+  }
+  
+  .link-card-compact:hover {
+    @apply bg-card-hover border-primary/40;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .link-card-compact:active {
+    transform: translateY(0px);
+    transition: all 0.1s ease-out;
+  }
+
+  .social-link {
+    transition: var(--transition-fast);
+    will-change: transform;
+  }
+  
+  .social-link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .social-link:active {
+    transform: translateY(0px) scale(0.95);
+  }
+
+  .scroll-to-top {
+    @apply fixed bottom-6 right-6 z-20 w-10 h-10 rounded-full bg-card border border-border;
+    @apply hover:bg-card-hover hover:border-primary/40 hover:scale-105;
+    @apply flex items-center justify-center text-primary;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-card);
+    will-change: transform, box-shadow;
+    animation: fadeInUp 0.3s ease-out;
+  }
+  
+  .scroll-to-top:hover {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .link-card {
+    @apply bg-card rounded-xl p-4 cursor-pointer border border-border;
+    transition: var(--transition-smooth);
+    will-change: transform, box-shadow;
+  }
+  
+  .link-card:hover {
+    @apply bg-card-hover border-primary/40;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .link-card:active {
+    transform: translateY(0px);
+    transition: var(--transition-fast);
+  }
+  
+  .share-button {
+    @apply bg-card border border-border rounded-full p-2.5 cursor-pointer;
+    transition: var(--transition-fast);
+    will-change: transform, background-color;
+  }
+  
+  .share-button:hover {
+    @apply bg-primary text-primary-foreground border-primary;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.6) hsl(var(--muted));
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 2px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.6);
+    border-radius: 2px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.8);
+  }
+
+  .theme-toggle {
+    @apply fixed top-6 right-20 z-20 w-10 h-10 rounded-full bg-card border border-border;
+    @apply hover:bg-card-hover hover:border-primary/40 hover:scale-105;
+    @apply flex items-center justify-center;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-card);
+    will-change: transform, box-shadow;
+  }
+  
+  .theme-toggle:hover {
+    box-shadow: var(--shadow-elevated);
+  }
+}
