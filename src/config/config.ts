@@ -26,48 +26,284 @@ export interface ProfileConfig {
 export const profileConfig: ProfileConfig = {
   profileImage: "./profile.jpeg",
   name: "Kushal Gupta",
-  about: "🚀 DevOps & Platform Engineer | Tech blogs, experiments & personal insights",
+  about: "🚀 Experienced DevOps & Platform Engineer | Skilled in Containers, CI/CD, IaC | Exploring AI, Cloud-Native & Secure Systems",
   socialLinks: [
     {
-      name: 'GitHub',
-      url: 'https://github.com/thisiskushal31',
-      icon: 'fab fa-github'
+      name: "GitHub",
+      url: "https://github.com/thisiskushal31",
+      icon: "fab fa-github",
     },
     {
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/thisiskushalgupta/',
-      icon: 'fab fa-linkedin'
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/thisiskushalgupta/",
+      icon: "fab fa-linkedin",
     },
     {
-      name: 'Website',
-      url: 'https://thisiskushal31.github.io',
-      icon: 'fas fa-globe'
-    }
+      name: "Twitter",
+      url: "https://twitter.com/yourhandle", // Replace with your actual handle
+      icon: "fab fa-x-twitter",
+    },
+    {
+      name: "Website",
+      url: "https://thisiskushal31.github.io",
+      icon: "fas fa-globe",
+    },
   ],
   sections: [
     {
-      title: "Blog Content",
+      title: "Containers & Orchestration",
       links: [
-        { title: "Comming Soon", url: "https://thisiskushal31.github.io/blog/", icon: "Heart" }
-        // { title: "How to Structure Your Argo CD Repositories Using Application Sets", url: "https://thisiskushal31.github.io/blog/", icon: "BookOpen" },
-        // { title: "Complete Guide to Setting Up Production-Ready Kubernetes Clusters with Monitoring and Logging", url: "https://blog.kushal.dev/k8s-production-setup", icon: "Code" },
-        // { title: "Docker Multi-Stage Builds: Optimizing Container Images for Production Deployments", url: "https://blog.kushal.dev/docker-multistage", icon: "Briefcase" },
-        // { title: "CI/CD Pipeline Best Practices for Modern Cloud-Native Applications", url: "https://blog.kushal.dev/cicd-best-practices", icon: "Zap" },
-        // { title: "Infrastructure as Code with Terraform: From Beginner to Advanced Techniques", url: "https://blog.kushal.dev/terraform-guide", icon: "Globe" },
-        // { title: "Monitoring and Observability in Microservices Architecture", url: "https://blog.kushal.dev/microservices-monitoring", icon: "Star" },
-        // { title: "Short Guide", url: "https://blog.kushal.dev/short", icon: "Heart" },
-        // { title: "GitOps Workflow Implementation with ArgoCD, Helm, and Kubernetes for Scalable Application Deployment", url: "https://blog.kushal.dev/gitops-workflow", icon: "Users" }
-      ]
-    }
+        {
+          title: "Coming Soon",
+          url: "https://thisiskushal31.github.io/blog/",
+          icon: "Code"
+        }
+      ],
+    },
     // {
-    //   title: "Content & Blog",
+    //   title: "Generative AI & LLM Integration",
     //   links: [
-    //     { title: "Main Blog", url: "https://blog.kushal.dev", icon: "BookOpen" },
-    //     { title: "Tech Articles", url: "https://kushal.dev/articles", icon: "Code" },
-    //     { title: "DevOps Tutorials", url: "https://kushal.dev/devops", icon: "Briefcase" },
-    //     { title: "Weekly Newsletter", url: "https://newsletter.kushal.dev", icon: "Mail" },
-    //     { title: "Podcast", url: "https://podcast.kushal.dev", icon: "Music" }
-    //   ]
-    // }
-  ]
+    //     {
+    //       title: "Building RAG Systems with LangChain and Pinecone",
+    //       url: "https://thisiskushal31.github.io/blog/rag-langchain-pinecone",
+    //       icon: "Zap",
+    //     },
+    //     {
+    //       title: "Fine-Tuning Llama 2 with Hugging Face on AWS",
+    //       url: "https://thisiskushal31.github.io/blog/llm-finetuning-llama2",
+    //       icon: "Code",
+    //     },
+    //     {
+    //       title: "Prompt Engineering for Scalable AI APIs",
+    //       url: "https://thisiskushal31.github.io/blog/prompt-engineering-apis",
+    //       icon: "Brain",
+    //     },
+    //     {
+    //       title: "Multimodal AI: Integrating Text and Images with Hugging Face CLIP",
+    //       url: "https://thisiskushal31.github.io/blog/multimodal-ai-clip",
+    //       icon: "Image",
+    //     },
+    //     {
+    //       title: "AI Agents: Building Autonomous Agents Using LangChain and OpenAI",
+    //       url: "https://thisiskushal31.github.io/blog/ai-agents-langchain",
+    //       icon: "Robot",
+    //     },
+    //     {
+    //       title: "Ethical LLM Deployment: Mitigating Bias in Fine-Tuned Models on AWS/GCP",
+    //       url: "https://thisiskushal31.github.io/blog/ethical-llm-bias",
+    //       icon: "BalanceScale",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Container Orchestration",
+    //   links: [
+    //     {
+    //       title: "Scaling Kubernetes with ArgoCD and Helm",
+    //       url: "https://thisiskushal31.github.io/blog/kubernetes-argocd-helm",
+    //       icon: "Server",
+    //     },
+    //     {
+    //       title: "Cluster Autoscaler Setup for Cost Efficiency",
+    //       url: "https://thisiskushal31.github.io/blog/k8s-autoscaler",
+    //       icon: "Gauge",
+    //     },
+    //     {
+    //       title: "Unifying VMs and Containers: Kubernetes as a Standard Orchestrator",
+    //       url: "https://thisiskushal31.github.io/blog/k8s-vm-unification",
+    //       icon: "Layers",
+    //     },
+    //     {
+    //       title: "Advanced GitOps: Implementing Flux Alongside ArgoCD for Multi-Cloud",
+    //       url: "https://thisiskushal31.github.io/blog/gitops-flux-argocd",
+    //       icon: "GitBranch",
+    //     },
+    //     {
+    //       title: "Cost-Efficient Orchestration: Autoscaling with Kubernetes on Azure/AWS",
+    //       url: "https://thisiskushal31.github.io/blog/k8s-cost-scaling",
+    //       icon: "DollarSign",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "CI/CD Pipelines",
+    //   links: [
+    //     {
+    //       title: "Automating Deployments with GitHub Actions",
+    //       url: "https://thisiskushal31.github.io/blog/cicd-github-actions",
+    //       icon: "Zap",
+    //     },
+    //     {
+    //       title: "Jenkins to GitLab CI Migration Guide",
+    //       url: "https://thisiskushal31.github.io/blog/jenkins-gitlab-ci",
+    //       icon: "Code",
+    //     },
+    //     {
+    //       title: "DevSecOps Integration: Embedding Security Scans in GitHub Actions",
+    //       url: "https://thisiskushal31.github.io/blog/devsecops-github",
+    //       icon: "Shield",
+    //     },
+    //     {
+    //       title: "AI-Enhanced CI/CD: Automating Pipelines with GenAI Tools",
+    //       url: "https://thisiskushal31.github.io/blog/ai-cicd-automation",
+    //       icon: "Brain",
+    //     },
+    //     {
+    //       title: "Hyperautomation in CI/CD: Using Ansible for End-to-End Automation",
+    //       url: "https://thisiskushal31.github.io/blog/hyperautomation-ansible",
+    //       icon: "Wrench",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Infrastructure as Code (IaC)",
+    //   links: [
+    //     {
+    //       title: "Terraform Modules for Multi-Cloud Deployments",
+    //       url: "https://thisiskushal31.github.io/blog/terraform-multicloud",
+    //       icon: "Globe",
+    //     },
+    //     {
+    //       title: "Ansible for Zero-Downtime Server Config",
+    //       url: "https://thisiskushal31.github.io/blog/ansible-server-config",
+    //       icon: "Wrench",
+    //     },
+    //     {
+    //       title: "Secure IaC: Scanning Terraform Code with KICS and Snyk",
+    //       url: "https://thisiskushal31.github.io/blog/secure-iac-snyk",
+    //       icon: "Lock",
+    //     },
+    //     {
+    //       title: "Multi-Cloud IaC: Provisioning with Pulumi and Terraform Modules",
+    //       url: "https://thisiskushal31.github.io/blog/multi-iac-pulumi",
+    //       icon: "Cloud",
+    //     },
+    //     {
+    //       title: "IaC Maturity: Best Practices for Scalable, Compliant Infra",
+    //       url: "https://thisiskushal31.github.io/blog/iac-maturity",
+    //       icon: "CheckCircle",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Observability & Monitoring",
+    //   links: [
+    //     {
+    //       title: "Prometheus and Grafana for Kubernetes Monitoring",
+    //       url: "https://thisiskushal31.github.io/blog/prometheus-grafana-k8s",
+    //       icon: "ChartLine",
+    //     },
+    //     {
+    //       title: "ELK Stack for Centralized Logging",
+    //       url: "https://thisiskushal31.github.io/blog/elk-stack-logging",
+    //       icon: "Database",
+    //     },
+    //     {
+    //       title: "AI-Driven Predictive Monitoring: Using Prometheus with ML Models",
+    //       url: "https://thisiskushal31.github.io/blog/ai-predictive-prometheus",
+    //       icon: "Brain",
+    //     },
+    //     {
+    //       title: "Full-Stack Observability: Integrating ELK with Grafana for Microservices",
+    //       url: "https://thisiskushal31.github.io/blog/fullstack-observability",
+    //       icon: "Layers",
+    //     },
+    //     {
+    //       title: "Cost-Cutting in Observability: Optimizing Data with Cloud Tools",
+    //       url: "https://thisiskushal31.github.io/blog/observability-cost",
+    //       icon: "DollarSign",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Secure Software Development",
+    //   links: [
+    //     {
+    //       title: "Zero-Trust Security in Node.js APIs",
+    //       url: "https://thisiskushal31.github.io/blog/zero-trust-nodejs",
+    //       icon: "Lock",
+    //     },
+    //     {
+    //       title: "Vulnerability Scanning with Snyk in CI/CD",
+    //       url: "https://thisiskushal31.github.io/blog/snyk-cicd",
+    //       icon: "Shield",
+    //     },
+    //     {
+    //       title: "AI in Secure Coding: Using GenAI for Vulnerability Detection",
+    //       url: "https://thisiskushal31.github.io/blog/ai-secure-coding",
+    //       icon: "Code",
+    //     },
+    //     {
+    //       title: "Defensive Programming: Implementing Zero-Trust in Node.js Apps",
+    //       url: "https://thisiskushal31.github.io/blog/defensive-zero-trust",
+    //       icon: "Shield",
+    //     },
+    //     {
+    //       title: "Compliance Automation: Achieving SOC2 with IAM and Secrets Management",
+    //       url: "https://thisiskushal31.github.io/blog/compliance-soc2",
+    //       icon: "CheckCircle",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Cloud-Native Architecture",
+    //   links: [
+    //     {
+    //       title: "Microservices with Kafka and Kubernetes",
+    //       url: "https://thisiskushal31.github.io/blog/microservices-kafka-k8s",
+    //       icon: "Network",
+    //     },
+    //     {
+    //       title: "Serverless APIs with AWS Lambda",
+    //       url: "https://thisiskushal31.github.io/blog/serverless-lambda",
+    //       icon: "Cloud",
+    //     },
+    //     {
+    //       title: "Scalable Microservices: Event-Driven Design with Kafka on Kubernetes",
+    //       url: "https://thisiskushal31.github.io/blog/scalable-kafka-k8s",
+    //       icon: "Server",
+    //     },
+    //     {
+    //       title: "AI/ML in Cloud-Native: Integrating SageMaker with Serverless Apps",
+    //       url: "https://thisiskushal31.github.io/blog/ai-cloud-sagemaker",
+    //       icon: "Brain",
+    //     },
+    //     {
+    //       title: "Multi-Cloud Native Strategies: Hybrid Architectures on AWS/Azure/GCP",
+    //       url: "https://thisiskushal31.github.io/blog/multi-cloud-hybrid",
+    //       icon: "Globe",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "System Design & Scalability",
+    //   links: [
+    //     {
+    //       title: "Designing High-Availability Systems on GCP",
+    //       url: "https://thisiskushal31.github.io/blog/system-design-ha-gcp",
+    //       icon: "Architecture",
+    //     },
+    //     {
+    //       title: "Caching Strategies with Redis for Scalability",
+    //       url: "https://thisiskushal31.github.io/blog/redis-caching",
+    //       icon: "Database",
+    //     },
+    //     {
+    //       title: "High-Availability Design: Tradeoffs in Distributed Systems",
+    //       url: "https://thisiskushal31.github.io/blog/ha-distributed-tradeoffs",
+    //       icon: "BalanceScale",
+    //     },
+    //     {
+    //       title: "Database Scaling: Sharding with PostgreSQL and Redis",
+    //       url: "https://thisiskushal31.github.io/blog/db-scaling-postgres",
+    //       icon: "Database",
+    //     },
+    //     {
+    //       title: "System Design Patterns: Circuit Breakers in Microservices",
+    //       url: "https://thisiskushal31.github.io/blog/design-patterns-circuit",
+    //       icon: "Code",
+    //     },
+    //   ],
+    // },
+  ],
 }; 
