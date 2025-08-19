@@ -40,7 +40,7 @@ export const profileConfig: ProfileConfig = {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/yourhandle", // Replace with your actual handle
+      url: "https://twitter.com/thisis_kushal",
       icon: "fab fa-x-twitter",
     },
     {
