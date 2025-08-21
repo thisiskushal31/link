@@ -29,25 +29,20 @@ export const profileConfig: ProfileConfig = {
   about: "🚀 Experienced DevOps & Platform Engineer | Skilled in Containers, CI/CD, IaC | Exploring AI, Cloud-Native & Secure Systems",
   socialLinks: [
     {
-      name: "GitHub",
-      url: "https://github.com/thisiskushal31",
-      icon: "fab fa-github",
+      name: "Website",
+      url: "https://thisiskushal31.github.io",
+      icon: "fas fa-globe",
     },
     {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/thisiskushalgupta/",
-      icon: "fab fa-linkedin",
+      name: "E-Mail",
+      url: "mailto:guptakushal070@gmail.com",
+      icon: "fa-solid fa-envelope",
     },
     {
       name: "Twitter",
       url: "https://twitter.com/thisis_kushal",
       icon: "fab fa-x-twitter",
-    },
-    {
-      name: "Website",
-      url: "https://thisiskushal31.github.io",
-      icon: "fas fa-globe",
-    },
+    }
   ],
   sections: [
     {
