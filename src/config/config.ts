@@ -39,12 +39,47 @@ export const profileConfig: ProfileConfig = {
       icon: "fa-solid fa-envelope",
     },
     {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/thisiskushalgupta/",
+      icon: "fab fa-linkedin",
+    },
+    {
       name: "Twitter",
       url: "https://twitter.com/thisis_kushal",
       icon: "fab fa-x-twitter",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/thisiskushal31",
+      icon: "fab fa-github",
+    },
+    {
+      name: "Blog",
+      url: "https://thisiskushal31.github.io/blog/",
+      icon: "fas fa-blog",
     }
   ],
   sections: [
+    // {
+    //   title: "Quick Links",
+    //   links: [
+    //     {
+    //       title: "Twitter",
+    //       url: "https://twitter.com/thisis_kushal",
+    //       icon: "fab fa-x-twitter",
+    //     },
+    //     {
+    //       title: "GitHub",
+    //       url: "https://github.com/thisiskushal31",
+    //       icon: "fab fa-github",
+    //     },
+    //     {
+    //       title: "Self Hosted Blog",
+    //       url: "https://thisiskushal31.github.io/blog/",
+    //       icon: "fas fa-blog",
+    //     }
+    //   ],
+    // },
     {
       title: "Containers & Orchestration",
       links: [

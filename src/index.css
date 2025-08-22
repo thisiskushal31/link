@@ -148,6 +148,23 @@
     transform: translateY(0px) scale(0.95);
   }
 
+  /* Responsive social links container */
+  @media (max-width: 640px) {
+    .social-links-container {
+      gap: 0.75rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .social-links-container {
+      gap: 0.5rem;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+
   .scroll-to-top {
     @apply fixed bottom-6 right-6 z-20 w-10 h-10 rounded-full bg-card border border-border;
     @apply hover:bg-card-hover hover:border-primary/40 hover:scale-105;
