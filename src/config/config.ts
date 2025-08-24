@@ -79,27 +79,27 @@ export const profileConfig: ProfileConfig = {
           icon: "Server"
         },
         {
-          title: "Self-Managed Infrastructure",
+          title: "Elasticsearch Self-Managed Infrastructure",
           url: "https://thisiskushal31.github.io/blog/#/blog/self-managed-elasticsearch-vm-bare-metal-production-guide",
           icon: "Settings"
         },
         {
-          title: "Docker Deployment",
+          title: "Elasticsearch Docker Deployment",
           url: "https://thisiskushal31.github.io/blog/#/blog/docker-elasticsearch-container-deployment-strategies",
           icon: "Container"
         },
         {
-          title: "Kubernetes Deep Dive",
+          title: "Elasticsearch Kubernetes Deep Dive",
           url: "https://thisiskushal31.github.io/blog/#/blog/kubernetes-elasticsearch-eck-helm-raw-yaml-deep-dive",
           icon: "Kubernetes"
         },
         {
-          title: "Local Development",
+          title: "Elasticsearch Local Development",
           url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-local-development-docker-packages-quick-start",
           icon: "Code"
         },
         {
-          title: "Decision Matrix",
+          title: "Elasticsearch Decision Matrix",
           url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-decision-matrix-complete-comparison-guide",
           icon: "BarChart3"
         }
