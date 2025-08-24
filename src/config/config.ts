@@ -60,36 +60,61 @@ export const profileConfig: ProfileConfig = {
     }
   ],
   sections: [
-    // {
-    //   title: "Quick Links",
-    //   links: [
-    //     {
-    //       title: "Twitter",
-    //       url: "https://twitter.com/thisis_kushal",
-    //       icon: "fab fa-x-twitter",
-    //     },
-    //     {
-    //       title: "GitHub",
-    //       url: "https://github.com/thisiskushal31",
-    //       icon: "fab fa-github",
-    //     },
-    //     {
-    //       title: "Self Hosted Blog",
-    //       url: "https://thisiskushal31.github.io/blog/",
-    //       icon: "fas fa-blog",
-    //     }
-    //   ],
-    // },
     {
-      title: "Containers & Orchestration",
+      title: "Elasticsearch Deployment",
       links: [
         {
-          title: "Coming Soon",
-          url: "https://thisiskushal31.github.io/blog/",
+          title: "Elasticsearch Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "Elastic Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elastic-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "Elastic Cloud Deep Dive",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elastic-cloud-deep-dive-hosted-vs-serverless-architecture",
+          icon: "Server"
+        },
+        {
+          title: "Self-Managed Infrastructure",
+          url: "https://thisiskushal31.github.io/blog/#/blog/self-managed-elasticsearch-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/docker-elasticsearch-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "Kubernetes Deep Dive",
+          url: "https://thisiskushal31.github.io/blog/#/blog/kubernetes-elasticsearch-eck-helm-raw-yaml-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-local-development-docker-packages-quick-start",
           icon: "Code"
+        },
+        {
+          title: "Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
         }
       ],
     },
+    // {
+    //   title: "Containers & Orchestration",
+    //   links: [
+    //     {
+    //       title: "Coming Soon",
+    //       url: "https://thisiskushal31.github.io/blog/",
+    //       icon: "Code"
+    //     }
+    //   ],
+    // },
     // {
     //   title: "Generative AI & LLM Integration",
     //   links: [
