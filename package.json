@@ -6,10 +6,11 @@
   "homepage": "https://thisiskushal31.github.io/link/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run generate-sitemap && cp sitemap.xml dist/sitemap.xml",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
