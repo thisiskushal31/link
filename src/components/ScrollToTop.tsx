@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ChevronUp } from 'lucide-react';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,10 +29,10 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="scroll-to-top"
+          className="scroll-to-top group"
           aria-label="Scroll to top"
         >
-          <i className="fas fa-arrow-up text-sm"></i>
+          <ChevronUp className="w-6 h-6 transition-transform duration-200 group-hover:scale-110" />
         </button>
       )}
     </>

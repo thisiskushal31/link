@@ -166,9 +166,9 @@
   }
 
   .scroll-to-top {
-    @apply fixed bottom-6 right-6 z-20 w-10 h-10 rounded-full bg-card border border-border;
-    @apply hover:bg-card-hover hover:border-primary/40 hover:scale-105;
-    @apply flex items-center justify-center text-primary;
+    @apply fixed bottom-24 right-6 z-40 w-14 h-14 rounded-full bg-primary;
+    @apply hover:bg-primary/90 hover:scale-105;
+    @apply flex items-center justify-center text-primary-foreground;
     transition: var(--transition-fast);
     box-shadow: var(--shadow-card);
     will-change: transform, box-shadow;
@@ -253,5 +253,38 @@
   
   .theme-toggle:hover {
     box-shadow: var(--shadow-elevated);
+  }
+
+  /* Quick Jump Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .quick-jump-button {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  .quick-jump-button:hover {
+    animation: pulse 2s infinite;
+  }
+
+  .quick-jump-menu {
+    animation: fadeInUp 0.2s ease-out;
   }
 }

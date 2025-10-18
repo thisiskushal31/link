@@ -105,6 +105,26 @@ export const profileConfig: ProfileConfig = {
         }
       ],
     },
+    {
+      title: "AI Security & DevSecOps",
+      links: [
+        {
+          title: "AI Shift-Left Security Series",
+          url: "https://thisiskushal31.github.io/blog/#/blog/ai-shift-left-security",
+          icon: "Shield"
+        },
+        {
+          title: "AI Security Implementation Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/ai-shift-left-security-part2",
+          icon: "Settings"
+        },
+        {
+          title: "2025 AI Security Trends",
+          url: "https://thisiskushal31.github.io/blog/#/blog/ai-shift-left-security-part3",
+          icon: "TrendingUp"
+        }
+      ],
+    },
     // {
     //   title: "Containers & Orchestration",
     //   links: [

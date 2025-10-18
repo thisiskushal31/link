@@ -5,6 +5,7 @@ import LinkCard from './LinkCard';
 import ThemeToggle from './ThemeToggle';
 import SocialLinks from './SocialLinks';
 import ScrollToTop from './ScrollToTop';
+import QuickJump from './QuickJump';
 import { profileConfig } from '../config/config';
 
 const ProfileCard = () => {
@@ -52,6 +53,7 @@ const ProfileCard = () => {
       </button>
 
       <ScrollToTop />
+      <QuickJump />
 
       <header className="flex-shrink-0 container mx-auto px-4 pt-8 pb-4 max-w-md">
         <div className="text-center space-y-4">
@@ -88,7 +90,11 @@ const ProfileCard = () => {
       <main className="flex-1 container mx-auto px-4 max-w-md overflow-hidden">
         <div className="h-full overflow-y-auto custom-scrollbar space-y-4 pb-4">
           {config.sections.map((section, sectionIndex) => (
-            <section key={section.title} className="space-y-3">
+            <section 
+              key={section.title} 
+              id={`section-${section.title.toLowerCase().replace(/\s+/g, '-')}`}
+              className="space-y-3"
+            >
               <h2 className="text-lg font-semibold text-center text-primary sticky top-0 bg-background py-1 rounded-lg">
                 {section.title}
               </h2>
