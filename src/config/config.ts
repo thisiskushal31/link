@@ -114,6 +114,11 @@ export const profileConfig: ProfileConfig = {
           icon: "Shield"
         },
         {
+          title: "AI Security Problem & Solution",
+          url: "https://thisiskushal31.github.io/blog/#/blog/ai-shift-left-security-part1",
+          icon: "AlertTriangle"
+        },
+        {
           title: "AI Security Implementation Guide",
           url: "https://thisiskushal31.github.io/blog/#/blog/ai-shift-left-security-part2",
           icon: "Settings"
