@@ -2,6 +2,7 @@ export interface LinkData {
   title: string;
   url: string;
   icon: string;
+  id?: string; // Unique ID for shareable links
 }
 
 export interface SectionData {

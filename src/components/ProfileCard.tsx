@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Share } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import LinkCard from './LinkCard';
@@ -7,10 +8,49 @@ import SocialLinks from './SocialLinks';
 import ScrollToTop from './ScrollToTop';
 import QuickJump from './QuickJump';
 import { profileConfig } from '../config/config';
+import { sectionIdToTitle, scrollToSection, updateUrlForSection, resetUrlToMain, sectionTitleToId, linkTitleToId, scrollToLink } from '../utils/sectionUtils';
 
 const ProfileCard = () => {
   const [config] = useState(profileConfig);
   const [imageError, setImageError] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
+  const { sectionId, linkId } = useParams<{ sectionId?: string; linkId?: string }>();
+
+  // Handle section and link navigation from URL parameters
+  useEffect(() => {
+    if (sectionId) {
+      const sectionTitle = sectionIdToTitle(sectionId, config.sections);
+      if (sectionTitle) {
+        // If there's also a linkId, redirect directly to the external URL
+        if (linkId) {
+          const section = config.sections.find(s => sectionTitleToId(s.title) === sectionId);
+          if (section) {
+            const link = section.links.find(l => linkTitleToId(l.title) === linkId);
+            if (link) {
+              setIsRedirecting(true);
+              // Small delay to show redirect message
+              setTimeout(() => {
+                // Redirect in the same tab (replaces current page)
+                // This won't trigger popup blockers as it's navigation, not opening new windows
+                try {
+                  window.location.href = link.url;
+                } catch (error) {
+                  // Fallback: try location.replace for better compatibility
+                  window.location.replace(link.url);
+                }
+              }, 500);
+              return;
+            }
+          }
+        }
+        
+        // If no linkId or link not found, scroll to section
+        setTimeout(() => {
+          scrollToSection(sectionTitle, 100);
+        }, 100);
+      }
+    }
+  }, [sectionId, linkId, config.sections]);
 
   const handleShare = async () => {
     try {
@@ -42,6 +82,26 @@ const ProfileCard = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative">
+      {/* Redirect overlay */}
+      {isRedirecting && (
+        <div className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="text-center space-y-4 p-8 max-w-md mx-auto">
+            <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full mx-auto"></div>
+            <div>
+              <h2 className="text-xl font-semibold text-primary mb-2">Redirecting to Resource</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                This is a central link hub. You're being redirected to the specific resource you requested. 
+                This is expected behavior - not a suspicious link.
+              </p>
+              <div className="mt-3 text-xs text-muted-foreground/80">
+                <p>🔗 Central Link Hub by Kushal Gupta</p>
+                <p>Redirecting to your requested content...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <ThemeToggle />
       
       <button
@@ -92,7 +152,7 @@ const ProfileCard = () => {
           {config.sections.map((section, sectionIndex) => (
             <section 
               key={section.title} 
-              id={`section-${section.title.toLowerCase().replace(/\s+/g, '-')}`}
+              id={`section-${sectionTitleToId(section.title)}`}
               className="space-y-3"
             >
               <h2 className="text-lg font-semibold text-center text-primary sticky top-0 bg-background py-1 rounded-lg">
@@ -103,6 +163,7 @@ const ProfileCard = () => {
                   <LinkCard
                     key={`${section.title}-${link.title}`}
                     link={link}
+                    sectionTitle={section.title}
                     delay={(sectionIndex * 100) + (linkIndex * 30)}
                   />
                 ))}
