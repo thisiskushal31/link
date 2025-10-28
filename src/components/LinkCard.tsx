@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { ExternalLink, Share2 } from 'lucide-react';
 import { getIconClass } from '../utils/iconMapper';
-import { LinkData } from '../config/config';
+import { LinkData, SocialLink } from '../config/config';
 import { generateLinkUrl } from '../utils/sectionUtils';
 import { toast } from '@/hooks/use-toast';
 
 interface LinkCardProps {
-  link: LinkData;
+  link: LinkData | SocialLink;
   sectionTitle: string;
   delay?: number;
 }
@@ -14,6 +14,10 @@ interface LinkCardProps {
 const LinkCard = ({ link, sectionTitle, delay = 0 }: LinkCardProps) => {
   const [showShareButton, setShowShareButton] = useState(false);
   const iconClass = getIconClass(link.icon);
+  
+  // Handle both LinkData and SocialLink types
+  const linkTitle = 'title' in link ? link.title : link.name;
+  const linkId = 'id' in link ? link.id : undefined;
 
   const handleClick = () => {
     if (link.url.startsWith('mailto:')) {
@@ -26,11 +30,11 @@ const LinkCard = ({ link, sectionTitle, delay = 0 }: LinkCardProps) => {
   const handleShareClick = async (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent triggering the link click
     try {
-      const linkUrl = generateLinkUrl(sectionTitle, link.title);
+      const linkUrl = generateLinkUrl(sectionTitle, linkTitle);
       await navigator.clipboard.writeText(linkUrl);
       toast({
         title: "Direct link copied!",
-        description: `One-click link to "${link.title}" copied. Recipients will be redirected through this central hub to the resource.`
+        description: `One-click link to "${linkTitle}" copied. Recipients will be redirected through this central hub to the resource.`
       });
     } catch (error) {
       console.error('Failed to copy link:', error);
@@ -58,14 +62,14 @@ const LinkCard = ({ link, sectionTitle, delay = 0 }: LinkCardProps) => {
     >
       <div className="flex items-center space-x-3">
         <div className="flex-shrink-0">
-          <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center text-primary-foreground transition-all duration-200 group-hover:scale-105">
+          <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-primary-foreground transition-all duration-200 group-hover:scale-105">
             <i className={`${iconClass} text-sm`}></i>
           </div>
         </div>
         
         <div className="flex-1 text-left min-w-0">
           <h3 className="text-sm font-medium text-card-foreground transition-colors duration-200 group-hover:text-primary leading-relaxed">
-            {link.title}
+            {linkTitle}
           </h3>
         </div>
         
@@ -74,8 +78,8 @@ const LinkCard = ({ link, sectionTitle, delay = 0 }: LinkCardProps) => {
             onClick={handleShareClick}
             onMouseEnter={() => setShowShareButton(true)}
             onMouseLeave={() => setShowShareButton(false)}
-            className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-background/20 rounded"
-            title={`Share ${link.title}`}
+            className="opacity-60 group-hover:opacity-100 transition-opacity p-1 hover:bg-background/20 rounded"
+            title={`Share ${linkTitle}`}
           >
             <Share2 className="w-3 h-3 text-muted-foreground/60 hover:text-primary transition-colors" />
           </button>

@@ -7,6 +7,7 @@ import ThemeToggle from './ThemeToggle';
 import SocialLinks from './SocialLinks';
 import ScrollToTop from './ScrollToTop';
 import QuickJump from './QuickJump';
+import { CollapsibleSection } from './CollapsibleSection';
 import { profileConfig } from '../config/config';
 import { sectionIdToTitle, scrollToSection, updateUrlForSection, resetUrlToMain, sectionTitleToId, linkTitleToId, scrollToLink } from '../utils/sectionUtils';
 
@@ -19,11 +20,11 @@ const ProfileCard = () => {
   // Handle section and link navigation from URL parameters
   useEffect(() => {
     if (sectionId) {
-      const sectionTitle = sectionIdToTitle(sectionId, config.sections);
+      const sectionTitle = sectionIdToTitle(sectionId, config.organizedSections);
       if (sectionTitle) {
         // If there's also a linkId, redirect directly to the external URL
         if (linkId) {
-          const section = config.sections.find(s => sectionTitleToId(s.title) === sectionId);
+          const section = config.organizedSections.find(s => sectionTitleToId(s.title) === sectionId);
           if (section) {
             const link = section.links.find(l => linkTitleToId(l.title) === linkId);
             if (link) {
@@ -50,7 +51,7 @@ const ProfileCard = () => {
         }, 100);
       }
     }
-  }, [sectionId, linkId, config.sections]);
+  }, [sectionId, linkId, config.organizedSections]);
 
   const handleShare = async () => {
     try {
@@ -115,7 +116,7 @@ const ProfileCard = () => {
       <ScrollToTop />
       <QuickJump />
 
-      <header className="flex-shrink-0 container mx-auto px-4 pt-8 pb-4 max-w-md">
+      <header className="flex-shrink-0 container mx-auto px-4 pt-8 pb-4 max-w-lg">
         <div className="text-center space-y-4">
           <div className="relative inline-block">
             <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-primary/20 ring-offset-2 ring-offset-background">
@@ -147,33 +148,20 @@ const ProfileCard = () => {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 max-w-md overflow-hidden">
+      <main className="flex-1 container mx-auto px-4 max-w-lg overflow-hidden">
         <div className="h-full overflow-y-auto custom-scrollbar space-y-4 pb-4">
-          {config.sections.map((section, sectionIndex) => (
-            <section 
-              key={section.title} 
-              id={`section-${sectionTitleToId(section.title)}`}
-              className="space-y-3"
-            >
-              <h2 className="text-lg font-semibold text-center text-primary sticky top-0 bg-background py-1 rounded-lg">
-                {section.title}
-              </h2>
-              <div className="space-y-1.5">
-                {section.links.map((link, linkIndex) => (
-                  <LinkCard
-                    key={`${section.title}-${link.title}`}
-                    link={link}
-                    sectionTitle={section.title}
-                    delay={(sectionIndex * 100) + (linkIndex * 30)}
-                  />
-                ))}
-              </div>
-            </section>
+          {/* Blog Sections - Expanded by default for immediate visibility */}
+          {config.organizedSections.map((section, sectionIndex) => (
+            <CollapsibleSection
+              key={section.title}
+              section={section}
+              delay={sectionIndex * 150}
+            />
           ))}
         </div>
       </main>
 
-      <footer className="flex-shrink-0 container mx-auto px-4 py-4 max-w-md">
+      <footer className="flex-shrink-0 container mx-auto px-4 py-4 max-w-lg">
         <div className="text-center">
           <div className="text-xs text-muted-foreground/60">
             © 2025 Kushal Gupta. All rights reserved.

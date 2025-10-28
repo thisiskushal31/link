@@ -10,9 +10,10 @@ const QuickJump = () => {
 
   // Scroll to section function
   const scrollToSection = (sectionTitle: string) => {
-    const element = document.getElementById(`section-${sectionTitleToId(sectionTitle)}`);
-    if (element) {
-      element.scrollIntoView({ 
+    // Find the section element and scroll to it
+    const sectionElement = document.querySelector(`[data-section="${sectionTitleToId(sectionTitle)}"]`);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
@@ -64,16 +65,16 @@ const QuickJump = () => {
   // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = profileConfig.sections.map(section => 
-        document.getElementById(`section-${sectionTitleToId(section.title)}`)
-      ).filter(Boolean);
+      const sections = profileConfig.organizedSections.map(section => 
+        document.querySelector(`[data-section="${sectionTitleToId(section.title)}"]`)
+      ).filter(Boolean) as HTMLElement[];
 
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(profileConfig.sections[i].title);
+          setActiveSection(profileConfig.organizedSections[i].title);
           break;
         }
       }
@@ -114,7 +115,7 @@ const QuickJump = () => {
                 Jump to Section
               </h3>
               <div className="space-y-1">
-                {profileConfig.sections.map((section, index) => (
+                {profileConfig.organizedSections.map((section, index) => (
                   <div
                     key={section.title}
                     className={`w-full px-3 py-2 rounded-md text-sm transition-colors flex items-center justify-between group ${

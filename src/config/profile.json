@@ -1,0 +1,164 @@
+{
+  "personal": {
+    "name": "Kushal Gupta",
+    "title": "Software Engineer | Platform Engineering · DevOps · Cloud Infrastructure · Cloud-Native Development",
+    "bio": "🚀 Experienced DevOps & Platform Engineer | Skilled in Containers, CI/CD, IaC | Exploring AI, Cloud-Native & Secure Systems",
+    "location": "Global",
+    "avatar": "./profile.jpeg",
+    "email": "kushalgupta31@gmail.com"
+  },
+  "websites": {
+    "portfolio": "https://thisiskushal31.github.io/",
+    "blog": "https://thisiskushal31.github.io/blog/",
+    "publicProfile": "https://thisiskushal31.github.io/link/",
+    "resume": ""
+  },
+  "social": {
+    "github": "https://github.com/thisiskushal31",
+    "linkedin": "https://www.linkedin.com/in/thisiskushalgupta/",
+    "twitter": "https://x.com/thisis_kushal",
+    "email": "mailto:guptakushal070@gmail.com",
+    "website": "https://thisiskushal31.github.io",
+    "hashnode": "https://thisiskushal.hashnode.dev/",
+    "medium": "https://thisiskushalgupta.medium.com/",
+    "codepen": "https://codepen.io/thisiskushal31/",
+    "leetcode": "https://leetcode.com/u/Quick067/",
+    "gcp-badges": "https://www.cloudskillsboost.google/public_profiles/69072982-dd9b-46f1-9e9d-606cef93e04a",
+    "calendar": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meeting+with+Kushal&details=Please+add+a+Google+Meet+link+after+saving.&location=Online&add=guptakushal070@gmail.com"
+  },
+  "professional": {
+    "currentRole": "Software Engineer | Platform Engineering · DevOps · Cloud Infrastructure",
+    "company": "",
+    "skills": [
+      "Platform Engineering",
+      "DevOps & CI/CD",
+      "Cloud Infrastructure (AWS, GCP, Azure)",
+      "Cloud-Native Development",
+      "Kubernetes & Container Orchestration",
+      "Infrastructure as Code (Terraform, Pulumi)",
+      "Microservices Architecture",
+      "API Development & Management",
+      "Monitoring & Observability",
+      "Site Reliability Engineering (SRE)",
+      "Python",
+      "Go",
+      "JavaScript/TypeScript",
+      "Docker & Containerization",
+      "GitOps",
+      "Elasticsearch & Data Platforms"
+    ],
+    "interests": [
+      "Platform Engineering",
+      "Cloud-Native Software Development",
+      "DevOps & Automation",
+      "Infrastructure as Code",
+      "Microservices Architecture",
+      "Site Reliability Engineering",
+      "Technical Writing & Knowledge Sharing",
+      "Open Source Contributions",
+      "AI/ML Integration",
+      "Security & Compliance"
+    ]
+  },
+  "projects": {
+    "featured": [
+      {
+        "name": "Personal Blog",
+        "description": "A modern, responsive blog built with React and TypeScript",
+        "url": "https://thisiskushal31.github.io/blog/",
+        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS"]
+      },
+      {
+        "name": "Public Profile",
+        "description": "A centralized profile page with all my links and information",
+        "url": "https://thisiskushal31.github.io/link/",
+        "tech": ["HTML", "CSS", "JavaScript"]
+      }
+    ]
+  },
+  "contact": {
+    "email": "guptakushal070@gmail.com",
+    "phone": "",
+    "address": "Mumbai, India",
+    "timezone": "IST (UTC+5:30)"
+  },
+  "quickActions": [
+    {
+      "name": "Email",
+      "url": "mailto:guptakushal070@gmail.com",
+      "icon": "Mail",
+      "description": "Get in touch directly"
+    },
+    {
+      "name": "Calendar",
+      "url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meeting+with+Kushal&details=Please+add+a+Google+Meet+link+after+saving.&location=Online&add=guptakushal070@gmail.com",
+      "icon": "Calendar",
+      "description": "Schedule a meeting"
+    },
+    {
+      "name": "Self-Hosted Blog",
+      "url": "https://thisiskushal31.github.io/blog/#/",
+      "icon": "LinkIcon",
+      "description": "Read my articles on Self-Hosted Site"
+    },
+    {
+      "name": "Bio Link",
+      "url": "https://thisiskushal31.github.io/link/#/",
+      "icon": "LinkIcon",
+      "description": "All my links in one place"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/thisiskushalgupta",
+      "icon": "Globe",
+      "description": "Professional network"
+    },
+    {
+      "name": "Hashnode",
+      "url": "https://thisiskushal.hashnode.dev/",
+      "icon": "LinkIcon",
+      "description": "View my articles on Hashnode"
+    },
+    {
+      "name": "Medium",
+      "url": "https://thisiskushalgupta.medium.com/",
+      "icon": "LinkIcon",
+      "description": "Read my articles on Medium"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/thisiskushal31",
+      "icon": "CodeIcon",
+      "description": "Code repositories"
+    },
+    {
+      "name": "X.com",
+      "url": "https://x.com/thisis_kushal",
+      "icon": "LinkIcon",
+      "description": "Let's connect on X"
+    },
+    {
+      "name": "Codepen",
+      "url": "https://codepen.io/thisiskushal31/",
+      "icon": "LinkIcon",
+      "description": "Browse my projects on codepen"
+    },
+    {
+      "name": "Leetcode",
+      "url": "https://leetcode.com/u/Quick067/",
+      "icon": "LinkIcon",
+      "description": "Leetcode profile"
+    },
+    {
+      "name": "GCP-Badge",
+      "url": "https://www.cloudskillsboost.google/public_profiles/69072982-dd9b-46f1-9e9d-606cef93e04a",
+      "icon": "Award",
+      "description": "Google Cloud Skill Boost Badges by Qwiklabs"
+    }
+  ],
+  "preferences": {
+    "theme": "system",
+    "language": "en",
+    "currency": "USD"
+  }
+}

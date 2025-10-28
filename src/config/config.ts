@@ -1,3 +1,8 @@
+// Import centralized profile data
+import profileData from './profile.json';
+import { createEssentialSocialLinks, createAdditionalResourcesSection } from '../utils/configUtils';
+
+// ===== TYPE DEFINITIONS =====
 export interface LinkData {
   title: string;
   url: string;
@@ -20,47 +25,19 @@ export interface ProfileConfig {
   profileImage: string;
   name: string;
   about: string;
-  socialLinks: SocialLink[];
-  sections: SectionData[];
+  essentialSocialLinks: SocialLink[];
+  organizedSections: SectionData[];
 }
 
+// ===== PROFILE CONFIGURATION =====
+// Centralized configuration using profile.json data
 export const profileConfig: ProfileConfig = {
-  profileImage: "./profile.jpeg",
-  name: "Kushal Gupta",
-  about: "🚀 Experienced DevOps & Platform Engineer | Skilled in Containers, CI/CD, IaC | Exploring AI, Cloud-Native & Secure Systems",
-  socialLinks: [
-    {
-      name: "Website",
-      url: "https://thisiskushal31.github.io",
-      icon: "fas fa-globe",
-    },
-    {
-      name: "E-Mail",
-      url: "mailto:guptakushal070@gmail.com",
-      icon: "fa-solid fa-envelope",
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/thisiskushalgupta/",
-      icon: "fab fa-linkedin",
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/thisis_kushal",
-      icon: "fab fa-x-twitter",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/thisiskushal31",
-      icon: "fab fa-github",
-    },
-    {
-      name: "Blog",
-      url: "https://thisiskushal31.github.io/blog/",
-      icon: "fas fa-blog",
-    }
-  ],
-  sections: [
+  profileImage: profileData.personal.avatar,
+  name: profileData.personal.name,
+  about: profileData.personal.bio,
+  essentialSocialLinks: createEssentialSocialLinks(profileData.social),
+  organizedSections: [
+    // Blog sections first - main content focus
     {
       title: "Elasticsearch Deployment",
       links: [
@@ -386,5 +363,20 @@ export const profileConfig: ProfileConfig = {
     //     },
     //   ],
     // },
+    
+    // Additional resources section - consolidated from multiple sections
+    createAdditionalResourcesSection(profileData.social),
   ],
-}; 
+};
+
+// ===== CENTRALIZED PROFILE EXPORTS =====
+// Export the complete profile data for use in other projects
+export const PROFILE_DATA = profileData;
+
+// Export individual profile sections for easy access
+export const PERSONAL_INFO = profileData.personal;
+export const SOCIAL_LINKS_DATA = profileData.social;
+export const PROJECTS_DATA = profileData.projects;
+export const PROFESSIONAL_DATA = profileData.professional;
+export const CONTACT_DATA = profileData.contact;
+export const PREFERENCES_DATA = profileData.preferences;

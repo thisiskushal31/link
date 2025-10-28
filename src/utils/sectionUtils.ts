@@ -51,7 +51,7 @@ export const generateMainUrl = (baseUrl?: string): string => {
  */
 export const scrollToSection = (sectionTitle: string, offset: number = 0): void => {
   const sectionId = sectionTitleToId(sectionTitle);
-  const element = document.getElementById(`section-${sectionId}`);
+  const element = document.querySelector(`[data-section="${sectionId}"]`);
   
   if (element) {
     const elementPosition = element.offsetTop - offset;

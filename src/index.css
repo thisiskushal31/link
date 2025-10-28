@@ -141,11 +141,12 @@
   }
   
   .social-link:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
   
   .social-link:active {
-    transform: translateY(0px) scale(0.95);
+    transform: translateY(0px) scale(0.98);
   }
 
   /* Responsive social links container */

@@ -8,16 +8,32 @@ This repository contains the source code for my personal link hub website, which
 
 ## 📝 How to Add New Links
 
-1. **Edit Configuration:**  
-   * Open `src/config/config.ts` and add your new links to the appropriate section.
-2. **Add Social Links:**  
-   * Update the `socialLinks` array with your social media profiles.
-3. **Customize Profile:**  
-   * Update `name`, `about`, and `profileImage` to match your information.
-4. **Done!**  
-   * The changes will appear in your link hub.
+### Quick Setup
 
-(See the public repo for a full example if needed.)
+1. **Edit Profile Info** → Open `src/config/profile.json`
+   - Update `name`, `bio`, `avatar`, `email`
+   - Add your social media URLs
+
+2. **Add New Links** → Edit `src/config/config.ts`
+   - Add links to existing sections (Blog, Resources, etc.)
+   - Create new sections if needed
+   - Use FontAwesome icons: `"fas fa-icon-name"`
+
+3. **Deploy** → Push to GitHub
+   - Changes auto-deploy to your live site
+
+### Example
+
+```typescript
+// Add to any section in config.ts
+{
+  title: "My New Link",
+  url: "https://example.com",
+  icon: "fas fa-link"
+}
+```
+
+**Live Site**: [https://thisiskushal31.github.io/link/](https://thisiskushal31.github.io/link/)
 
 ---
 
