@@ -3,6 +3,7 @@ import { ChevronUp, List, X, Share2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { profileConfig } from '../config/config';
 import { sectionTitleToId, generateSectionUrl, generateMainUrl } from '../utils/sectionUtils';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 const QuickJump = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -134,13 +135,19 @@ const QuickJump = () => {
                       <span className="text-xs opacity-60">
                         {section.links.length}
                       </span>
-                      <button
-                        onClick={(e) => handleShareSection(section.title, e)}
-                        className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-background/20 rounded"
-                        title={`Share ${section.title}`}
-                      >
-                        <Share2 className="w-3 h-3" />
-                      </button>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <button
+                            onClick={(e) => handleShareSection(section.title, e)}
+                            className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-background/20 rounded"
+                          >
+                            <Share2 className="w-3 h-3" />
+                          </button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Share {section.title}</p>
+                        </TooltipContent>
+                      </Tooltip>
                     </div>
                   </div>
                 ))}

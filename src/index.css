@@ -112,7 +112,7 @@
   }
   
   .link-card-compact {
-    @apply bg-card rounded-xl py-2.5 px-3.5 cursor-pointer border border-border;
+    @apply bg-card rounded-xl py-3 px-3.5 cursor-pointer border border-border;
     transition: var(--transition-fast);
     will-change: transform, box-shadow;
   }

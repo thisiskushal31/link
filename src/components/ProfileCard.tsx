@@ -148,8 +148,8 @@ const ProfileCard = () => {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 max-w-lg overflow-hidden">
-        <div className="h-full overflow-y-auto custom-scrollbar space-y-4 pb-4">
+      <main className="flex-1 container mx-auto px-4 max-w-lg">
+        <div className="h-full overflow-y-auto custom-scrollbar space-y-4 pt-2 pb-4">
           {/* Blog Sections - Expanded by default for immediate visibility */}
           {config.organizedSections.map((section, sectionIndex) => (
             <CollapsibleSection

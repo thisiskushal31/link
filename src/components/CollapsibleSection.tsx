@@ -16,6 +16,7 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronRight, Share2 } from 'lucide-react';
 import LinkCard from './LinkCard';
 import { SectionData } from '../config/config';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface CollapsibleSectionProps {
   section: SectionData;
@@ -58,7 +59,7 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
 
   return (
     <div 
-      className="mb-6 bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden transition-all duration-300 hover:bg-card/80"
+      className="mb-6 bg-card/50 backdrop-blur-sm border border-border rounded-xl transition-all duration-300 hover:bg-card/80"
       data-section={section.title.toLowerCase().replace(/\s+/g, '-')}
       style={{ 
         animationDelay: `${delay}ms`,
@@ -91,13 +92,19 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
         </div>
         
         {showShareButton && (
-          <button
-            onClick={handleShare}
-            className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
-            title={`Share ${section.title} section`}
-          >
-            <Share2 className="w-4 h-4" />
-          </button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={handleShare}
+                className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-all duration-200"
+              >
+                <Share2 className="w-4 h-4" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Share {section.title} section</p>
+            </TooltipContent>
+          </Tooltip>
         )}
       </div>
 
@@ -107,7 +114,7 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
           isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-5 pb-5 space-y-3">
+        <div className="px-5 pt-2 pb-5 space-y-3">
           {section.links.map((link, index) => (
             <LinkCard
               key={link.id || `${section.title}-${index}`}
