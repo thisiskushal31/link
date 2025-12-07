@@ -36,6 +36,16 @@ export const createEssentialSocialLinks = (socialData: Record<string, string>): 
       name: "Blog",
       key: "blog",
       icon: "fas fa-blog",
+    },
+    {
+      name: "Schedule Meeting",
+      key: "calendar",
+      icon: "fas fa-calendar",
+    },
+    {
+      name: "Documentation",
+      key: "dochub",
+      icon: "fas fa-book-open",
     }
   ];
 
@@ -90,11 +100,6 @@ export const createOrganizedSections = (socialData: Record<string, string>): Sec
           title: "GCP Skill Badges",
           url: socialData["gcp-badges"] || "",
           icon: "fas fa-award",
-        },
-        {
-          title: "Schedule Meeting",
-          url: socialData.calendar || "",
-          icon: "fas fa-calendar",
         }
       ]
     }
@@ -141,11 +146,6 @@ export const createAdditionalResourcesSection = (socialData: Record<string, stri
       title: "GCP Skill Badges",
       url: socialData["gcp-badges"] || "",
       icon: "fas fa-award",
-    },
-    {
-      title: "Schedule Meeting",
-      url: socialData.calendar || "",
-      icon: "fas fa-calendar",
     }
   ];
 
