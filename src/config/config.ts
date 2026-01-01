@@ -108,6 +108,271 @@ export const profileConfig: ProfileConfig = {
         }
       ],
     },
+    {
+      title: "Database Mastery Series",
+      links: [
+        {
+          title: "Database Mastery Series Index",
+          url: "https://thisiskushal31.github.io/blog/#/blog/database-mastery-series-index",
+          icon: "Database"
+        },
+        {
+          title: "Relational vs NoSQL Databases",
+          url: "https://thisiskushal31.github.io/blog/#/blog/relational-vs-nosql-databases-complete-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
+    {
+      title: "MySQL Deployment Guide",
+      links: [
+        {
+          title: "MySQL Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "MySQL Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "MySQL Cloud Managed (RDS, Cloud SQL, Azure)",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-cloud-managed-rds-cloud-sql-azure-deep-dive",
+          icon: "Server"
+        },
+        {
+          title: "MySQL Self-Managed VM & Bare Metal",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-self-managed-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "MySQL Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-docker-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "MySQL Kubernetes Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-kubernetes-statefulset-operator-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "MySQL Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-local-development-docker-native-quick-start",
+          icon: "Code"
+        },
+        {
+          title: "MySQL Performance Optimization",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-performance-optimization-query-tuning-indexing",
+          icon: "Gauge"
+        },
+        {
+          title: "MySQL Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mysql-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
+    {
+      title: "MongoDB Deployment Guide",
+      links: [
+        {
+          title: "MongoDB Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "MongoDB Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "MongoDB Cloud Managed (Atlas)",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-cloud-managed-atlas-deep-dive",
+          icon: "Server"
+        },
+        {
+          title: "MongoDB Self-Managed VM & Bare Metal",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-self-managed-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "MongoDB Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-docker-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "MongoDB Kubernetes Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-kubernetes-statefulset-operator-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "MongoDB Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-local-development-docker-native-quick-start",
+          icon: "Code"
+        },
+        {
+          title: "MongoDB Performance Optimization",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-performance-optimization-query-tuning-indexing",
+          icon: "Gauge"
+        },
+        {
+          title: "MongoDB Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/mongodb-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
+    {
+      title: "Redis Deployment Guide",
+      links: [
+        {
+          title: "Redis Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "Redis Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "Redis Cloud Managed (ElastiCache, Memorystore)",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-cloud-managed-elasticache-memorystore-deep-dive",
+          icon: "Server"
+        },
+        {
+          title: "Redis Self-Managed VM & Bare Metal",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-self-managed-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "Redis Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-docker-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "Redis Kubernetes Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-kubernetes-statefulset-operator-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "Redis Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-local-development-docker-native-quick-start",
+          icon: "Code"
+        },
+        {
+          title: "Redis Performance Optimization",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-performance-optimization-memory-management",
+          icon: "Gauge"
+        },
+        {
+          title: "Redis Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/redis-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
+    {
+      title: "Aerospike Deployment Guide",
+      links: [
+        {
+          title: "Aerospike Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "Aerospike Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "Aerospike Architecture Deep Dive",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-architecture-deep-dive-hybrid-memory",
+          icon: "Architecture"
+        },
+        {
+          title: "Aerospike Self-Managed VM & Bare Metal",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-self-managed-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "Aerospike Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-docker-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "Aerospike Kubernetes Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-kubernetes-statefulset-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "Aerospike Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-local-development-docker-native-quick-start",
+          icon: "Code"
+        },
+        {
+          title: "Aerospike Performance Optimization",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-performance-optimization-hma-clustering",
+          icon: "Gauge"
+        },
+        {
+          title: "Aerospike Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/aerospike-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
+    {
+      title: "PostgreSQL Deployment Guide",
+      links: [
+        {
+          title: "PostgreSQL Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "PostgreSQL Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "PostgreSQL Cloud Managed (RDS, Cloud SQL, Azure)",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-cloud-managed-rds-cloud-sql-azure-deep-dive",
+          icon: "Server"
+        },
+        {
+          title: "PostgreSQL Self-Managed VM & Bare Metal",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-self-managed-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "PostgreSQL Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-docker-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "PostgreSQL Kubernetes Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-kubernetes-statefulset-operator-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "PostgreSQL Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-local-development-docker-native-quick-start",
+          icon: "Code"
+        },
+        {
+          title: "PostgreSQL Performance Optimization",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-performance-optimization-query-tuning-indexing",
+          icon: "Gauge"
+        },
+        {
+          title: "PostgreSQL Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
     // {
     //   title: "Containers & Orchestration",
     //   links: [

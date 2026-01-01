@@ -17,7 +17,34 @@ export const getIconClass = (iconName: string): string => {
     Heart: 'fas fa-heart',
     Star: 'fas fa-star',
     Users: 'fas fa-users',
-    Zap: 'fas fa-bolt'
+    Zap: 'fas fa-bolt',
+    // Database & Infrastructure icons
+    Database: 'fas fa-database',
+    Cloud: 'fas fa-cloud',
+    Server: 'fas fa-server',
+    Settings: 'fas fa-cog',
+    Container: 'fab fa-docker',
+    Kubernetes: 'fas fa-cubes',
+    BarChart3: 'fas fa-chart-bar',
+    Shield: 'fas fa-shield-alt',
+    AlertTriangle: 'fas fa-exclamation-triangle',
+    TrendingUp: 'fas fa-chart-line',
+    // Additional icons for new blog series
+    Layers: 'fas fa-layer-group',
+    Network: 'fas fa-network-wired',
+    Lock: 'fas fa-lock',
+    CheckCircle: 'fas fa-check-circle',
+    Gauge: 'fas fa-tachometer-alt',
+    GitBranch: 'fas fa-code-branch',
+    DollarSign: 'fas fa-dollar-sign',
+    Architecture: 'fas fa-sitemap',
+    BalanceScale: 'fas fa-balance-scale',
+    Brain: 'fas fa-brain',
+    Image: 'fas fa-image',
+    Robot: 'fas fa-robot',
+    Wrench: 'fas fa-wrench',
+    ChartLine: 'fas fa-chart-line',
+    Award: 'fas fa-award'
   };
 
   return iconMap[iconName] || 'fas fa-globe';
