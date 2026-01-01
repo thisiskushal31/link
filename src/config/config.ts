@@ -39,51 +39,6 @@ export const profileConfig: ProfileConfig = {
   organizedSections: [
     // Blog sections first - main content focus
     {
-      title: "Elasticsearch Deployment",
-      links: [
-        {
-          title: "Elasticsearch Deployment Guide",
-          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide",
-          icon: "Database"
-        },
-        {
-          title: "Elastic Cloud vs Self-Managed",
-          url: "https://thisiskushal31.github.io/blog/#/blog/elastic-cloud-vs-self-managed-strategic-decision-framework",
-          icon: "Cloud"
-        },
-        {
-          title: "Elastic Cloud Deep Dive",
-          url: "https://thisiskushal31.github.io/blog/#/blog/elastic-cloud-deep-dive-hosted-vs-serverless-architecture",
-          icon: "Server"
-        },
-        {
-          title: "Elasticsearch Self-Managed Infrastructure",
-          url: "https://thisiskushal31.github.io/blog/#/blog/self-managed-elasticsearch-vm-bare-metal-production-guide",
-          icon: "Settings"
-        },
-        {
-          title: "Elasticsearch Docker Deployment",
-          url: "https://thisiskushal31.github.io/blog/#/blog/docker-elasticsearch-container-deployment-strategies",
-          icon: "Container"
-        },
-        {
-          title: "Elasticsearch Kubernetes Deep Dive",
-          url: "https://thisiskushal31.github.io/blog/#/blog/kubernetes-elasticsearch-eck-helm-raw-yaml-deep-dive",
-          icon: "Kubernetes"
-        },
-        {
-          title: "Elasticsearch Local Development",
-          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-local-development-docker-packages-quick-start",
-          icon: "Code"
-        },
-        {
-          title: "Elasticsearch Decision Matrix",
-          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-decision-matrix-complete-comparison-guide",
-          icon: "BarChart3"
-        }
-      ],
-    },
-    {
       title: "AI Security & DevSecOps",
       links: [
         {
@@ -169,6 +124,56 @@ export const profileConfig: ProfileConfig = {
         {
           title: "MySQL Decision Matrix",
           url: "https://thisiskushal31.github.io/blog/#/blog/mysql-deployment-decision-matrix-complete-comparison-guide",
+          icon: "BarChart3"
+        }
+      ],
+    },
+    {
+      title: "PostgreSQL Deployment Guide",
+      links: [
+        {
+          title: "PostgreSQL Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-deployment-guide",
+          icon: "Database"
+        },
+        {
+          title: "PostgreSQL Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-cloud-vs-self-managed-strategic-decision-framework",
+          icon: "Cloud"
+        },
+        {
+          title: "PostgreSQL Cloud Managed (RDS, Cloud SQL, Azure)",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-cloud-managed-rds-cloud-sql-azure-deep-dive",
+          icon: "Server"
+        },
+        {
+          title: "PostgreSQL Self-Managed VM & Bare Metal",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-self-managed-vm-bare-metal-production-guide",
+          icon: "Settings"
+        },
+        {
+          title: "PostgreSQL Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-docker-container-deployment-strategies",
+          icon: "Container"
+        },
+        {
+          title: "PostgreSQL Kubernetes Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-kubernetes-statefulset-operator-deep-dive",
+          icon: "Kubernetes"
+        },
+        {
+          title: "PostgreSQL Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-local-development-docker-native-quick-start",
+          icon: "Code"
+        },
+        {
+          title: "PostgreSQL Performance Optimization",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-performance-optimization-query-tuning-indexing",
+          icon: "Gauge"
+        },
+        {
+          title: "PostgreSQL Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-deployment-decision-matrix-complete-comparison-guide",
           icon: "BarChart3"
         }
       ],
@@ -324,51 +329,46 @@ export const profileConfig: ProfileConfig = {
       ],
     },
     {
-      title: "PostgreSQL Deployment Guide",
+      title: "Elasticsearch Deployment Guide",
       links: [
         {
-          title: "PostgreSQL Deployment Guide",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-deployment-guide",
+          title: "Elasticsearch Deployment Guide",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide",
           icon: "Database"
         },
         {
-          title: "PostgreSQL Cloud vs Self-Managed",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-cloud-vs-self-managed-strategic-decision-framework",
+          title: "Elastic Cloud vs Self-Managed",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elastic-cloud-vs-self-managed-strategic-decision-framework",
           icon: "Cloud"
         },
         {
-          title: "PostgreSQL Cloud Managed (RDS, Cloud SQL, Azure)",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-cloud-managed-rds-cloud-sql-azure-deep-dive",
+          title: "Elastic Cloud Deep Dive",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elastic-cloud-deep-dive-hosted-vs-serverless-architecture",
           icon: "Server"
         },
         {
-          title: "PostgreSQL Self-Managed VM & Bare Metal",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-self-managed-vm-bare-metal-production-guide",
+          title: "Elasticsearch Self-Managed Infrastructure",
+          url: "https://thisiskushal31.github.io/blog/#/blog/self-managed-elasticsearch-vm-bare-metal-production-guide",
           icon: "Settings"
         },
         {
-          title: "PostgreSQL Docker Deployment",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-docker-container-deployment-strategies",
+          title: "Elasticsearch Docker Deployment",
+          url: "https://thisiskushal31.github.io/blog/#/blog/docker-elasticsearch-container-deployment-strategies",
           icon: "Container"
         },
         {
-          title: "PostgreSQL Kubernetes Deployment",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-kubernetes-statefulset-operator-deep-dive",
+          title: "Elasticsearch Kubernetes Deep Dive",
+          url: "https://thisiskushal31.github.io/blog/#/blog/kubernetes-elasticsearch-eck-helm-raw-yaml-deep-dive",
           icon: "Kubernetes"
         },
         {
-          title: "PostgreSQL Local Development",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-local-development-docker-native-quick-start",
+          title: "Elasticsearch Local Development",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-local-development-docker-packages-quick-start",
           icon: "Code"
         },
         {
-          title: "PostgreSQL Performance Optimization",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-performance-optimization-query-tuning-indexing",
-          icon: "Gauge"
-        },
-        {
-          title: "PostgreSQL Decision Matrix",
-          url: "https://thisiskushal31.github.io/blog/#/blog/postgresql-deployment-decision-matrix-complete-comparison-guide",
+          title: "Elasticsearch Decision Matrix",
+          url: "https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-decision-matrix-complete-comparison-guide",
           icon: "BarChart3"
         }
       ],
