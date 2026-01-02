@@ -16,6 +16,10 @@ function generateSitemap() {
     <priority>1.0</priority>
   </url>`;
 
+  // For bio link pages, the homepage is the main entry point
+  // All content is on a single page with hash-based navigation
+  // Clean URLs will redirect to hash URLs via the redirect script in index.html
+
   sitemap += `
 </urlset>`;
 
