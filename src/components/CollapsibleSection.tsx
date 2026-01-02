@@ -41,32 +41,70 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
   const handleShare = async (e: React.MouseEvent) => {
     e.stopPropagation();
     
-    try {
-      const sectionUrl = generateSectionUrl(section.title);
-      
-      if (navigator.share) {
+    const sectionUrl = generateSectionUrl(section.title);
+    
+    // Try native share API first (if available)
+    if (navigator.share) {
+      try {
         await navigator.share({
           title: `${section.title} - Kushal Gupta`,
           text: `Explore ${section.title} resources and links`,
           url: sectionUrl,
         });
-      } else {
+        return; // Success, exit early
+      } catch (error) {
+        // User cancelled share dialog - fall back to clipboard
+        if (error instanceof Error && error.name === 'AbortError') {
+          return; // User cancelled, don't show error or fallback
+        }
+        // If share failed for other reasons, fall through to clipboard copy
+      }
+    }
+    
+    // Fallback to clipboard copy
+    try {
+      // Try modern Clipboard API first
+      if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(sectionUrl);
         toast({
           title: "Section link copied!",
           description: `Shareable link to "${section.title}" section has been copied to clipboard.`
         });
+      } else {
+        // Fallback for older browsers using execCommand
+        const textArea = document.createElement('textarea');
+        textArea.value = sectionUrl;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+          const successful = document.execCommand('copy');
+          document.body.removeChild(textArea);
+          
+          if (successful) {
+            toast({
+              title: "Section link copied!",
+              description: `Shareable link to "${section.title}" section has been copied to clipboard.`
+            });
+          } else {
+            throw new Error('execCommand copy failed');
+          }
+        } catch (err) {
+          document.body.removeChild(textArea);
+          throw err;
+        }
       }
     } catch (error) {
-      // User cancelled share dialog - this is fine, don't show error
-      if (error instanceof Error && error.name !== 'AbortError') {
-        console.error('Error sharing section:', error);
-        toast({
-          title: "Copy failed",
-          description: "Unable to copy link to clipboard.",
-          variant: "destructive"
-        });
-      }
+      console.error('Failed to copy section link:', error);
+      toast({
+        title: "Copy failed",
+        description: "Unable to copy link to clipboard. Please copy the URL manually.",
+        variant: "destructive"
+      });
     }
   };
 
