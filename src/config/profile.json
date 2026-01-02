@@ -99,13 +99,13 @@
     },
     {
       "name": "Self-Hosted Blog",
-      "url": "https://thisiskushal31.github.io/blog/#/",
+      "url": "https://thisiskushal31.github.io/blog/",
       "icon": "LinkIcon",
       "description": "Read my articles on Self-Hosted Site"
     },
     {
       "name": "Bio Link",
-      "url": "https://thisiskushal31.github.io/link/#/",
+      "url": "https://thisiskushal31.github.io/link/",
       "icon": "LinkIcon",
       "description": "All my links in one place"
     },

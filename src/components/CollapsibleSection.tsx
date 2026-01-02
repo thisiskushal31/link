@@ -42,9 +42,9 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
     e.stopPropagation();
     
     const sectionUrl = generateSectionUrl(section.title);
-    
+      
     // Try native share API first (if available)
-    if (navigator.share) {
+      if (navigator.share) {
       try {
         await navigator.share({
           title: `${section.title} - Kushal Gupta`,
