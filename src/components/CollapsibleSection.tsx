@@ -17,6 +17,8 @@ import { ChevronDown, ChevronRight, Share2 } from 'lucide-react';
 import LinkCard from './LinkCard';
 import { SectionData } from '../config/config';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { generateSectionUrl } from '../utils/sectionUtils';
+import { useToast } from '@/hooks/use-toast';
 
 interface CollapsibleSectionProps {
   section: SectionData;
@@ -30,6 +32,7 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
   // Expand by default for better user experience - users can see content immediately
   const [isExpanded, setIsExpanded] = useState(true);
   const [showShareButton, setShowShareButton] = useState(false);
+  const { toast } = useToast();
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
@@ -39,7 +42,7 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
     e.stopPropagation();
     
     try {
-      const sectionUrl = `${window.location.origin}${window.location.pathname}#section-${section.title.toLowerCase().replace(/\s+/g, '-')}`;
+      const sectionUrl = generateSectionUrl(section.title);
       
       if (navigator.share) {
         await navigator.share({
@@ -49,11 +52,21 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
         });
       } else {
         await navigator.clipboard.writeText(sectionUrl);
-        // You could add a toast notification here
-        console.log('Section URL copied to clipboard');
+        toast({
+          title: "Section link copied!",
+          description: `Shareable link to "${section.title}" section has been copied to clipboard.`
+        });
       }
     } catch (error) {
-      console.error('Error sharing section:', error);
+      // User cancelled share dialog - this is fine, don't show error
+      if (error instanceof Error && error.name !== 'AbortError') {
+        console.error('Error sharing section:', error);
+        toast({
+          title: "Copy failed",
+          description: "Unable to copy link to clipboard.",
+          variant: "destructive"
+        });
+      }
     }
   };
 
