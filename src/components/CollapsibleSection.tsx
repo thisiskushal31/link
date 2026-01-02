@@ -47,7 +47,7 @@ export const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
       if (navigator.share) {
         await navigator.share({
           title: `${section.title} - Kushal Gupta`,
-          text: `Check out ${section.title} links`,
+          text: `Explore ${section.title} resources and links`,
           url: sectionUrl,
         });
       } else {
