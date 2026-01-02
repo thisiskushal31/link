@@ -179,5 +179,30 @@
 
   <body style="font-family: 'Inter', sans-serif;">
     <div id="root"></div>
+    <script>
+      // GitHub Pages SPA redirect for clean URLs
+      // This script converts clean URLs to hash URLs for HashRouter
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        
+        // Handle root link path: /link/ -> /link/#/
+        if (path === '/link/' && !hash) {
+          sessionStorage.redirect = window.location.href;
+          window.location.replace('/link/#/');
+        }
+        // If we're on a clean URL (not already a hash URL), redirect to hash version
+        else if (path !== '/link/' && path.startsWith('/link/') && !hash) {
+          var cleanPath = path.replace('/link/', '');
+          if (cleanPath) {
+            sessionStorage.redirect = window.location.href;
+            // Convert clean path to hash route
+            // Example: /link/section/ai-security -> /link/#/section/ai-security
+            window.location.replace('/link/#/' + cleanPath);
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
