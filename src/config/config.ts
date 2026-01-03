@@ -96,6 +96,7 @@ export const profileConfig: ProfileConfig = {
           url: "https://thisiskushal31.github.io/blog/mysql-cloud-managed-rds-cloud-sql-azure-deep-dive",
           icon: "Server"
         },
+        //
         {
           title: "MySQL Self-Managed VM & Bare Metal",
           url: "https://thisiskushal31.github.io/blog/mysql-self-managed-vm-bare-metal-production-guide",
